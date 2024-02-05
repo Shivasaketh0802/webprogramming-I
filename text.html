@@ -1,12 +1,29 @@
 <html>
   <body>
     <textarea id="myTextArea" rows="4" col="40"></textarea>
-    <button id="showTextButton">ShowText</button>button>
+    <button id="addTextButton">add Text</button>button>
+    <button id="showTextButton">Show Text</button>button>
+    <button id="saveNotesButton">Save Text</button>button>
   </body>
   <script>
     textarea=document.getElementByID("myTextArea");
+    addTextButton,addEventListener("click",function(){
+      textarea.value +="...some more text..."
+    });
     showTextButton=document.getElementByID("showTextButton");
     showTextButton.addventListener("click",function() {
-      console.logtextArea
+      console.logtextArea(textarea.value);
+      console.log("hi");
+    });
+    saveNotesButton=document.getElementByID("saveNotesTextButton");
+    saveNotesButton.addventListener("click",function() {
+      notes=textarea.value;
+      localStorage.setItem("notes",notes)
+      alert("Your notes Have been stored.")
+    });
+    windoe,addEventListener("load",function(){
+      storedNotes = localStorage.getItem("notes")
+      
+    })
   </script>
 </html>
