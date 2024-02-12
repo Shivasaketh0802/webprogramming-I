@@ -1,1 +1,20 @@
-
+<html>
+    <body>
+        Hello!
+        <textarea id="myTextArea" rows="4" cols="40"></textarea>
+        <script>
+            window.onload=function(){
+                textarea=document.getElementById("myTextArea");
+                var xhr=newXMLHttpRequest();
+                xhr.open('GET','classic_sci_fi_movies.json',true);
+                console.log("opened");
+                xhr.onreadystatechange=function(event){
+                    textarea.value="working on it"
+                    console.log("statechange")
+                }
+                console.log("sending")
+                xhr.send()
+            }
+        </script>
+    </body>
+</html>
