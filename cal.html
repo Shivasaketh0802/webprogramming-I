@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            function clearIn(){
+                document.getElementById("res").value ="";
+                }
+            function show(input){
+                document.getElementById("res").value += input;
+            }
+            function solve(){
+                var out1=eval(document.getElementById("res").value);
+                document.getElementById("res").value=parseFloat(out1);
+            }
+        </script>
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <table border="1" align="center">
+            <tr>
+                <td align="center" colspan="4"><input type="text" id ="res"></td>
+                
+            </tr>
+            <tr>
+                <td align="center" button onclick="clearIn()">AC</button></td>
+                <td align="center" button onclick="show('+/-')">+/-</button></td>
+                <td align="center" button onclick="show('%')">%</button></td>
+                <td align="center" button onclick="show('/')">/</button></td> 
+            </tr>
+            <tr>
+                <td align="center" button onclick="show('1')">1</button></td>
+                <td align="center" button onclick="show('2')">2</button></td>
+                <td align="center" button onclick="show('3')">3</button></td>
+                <td align="center" button onclick="show('+')">+</button></td>
+            </tr>
+            <tr>
+                <td align="center" button onclick="show('4')">4</button></td>
+                <td align="center" button onclick="show('5')">5</button></td>
+                <td align="center" button onclick="show('6')">6</button></td>
+                <td align="center" button onclick="show('-')">-</button></td>
+            </tr>
+            <tr>
+                <td align="center" button onclick="show('7')">7</button></td>
+                <td align="center" button onclick="show('8')">8</button></td>
+                <td align="center" button onclick="show('9')">9</button></td>
+                <td align="center" button onclick="show('*')">*</button></td>
+            </tr>
+            <tr>
+                <td align="center" button onclick="show('0')">0</button></td>
+                <td align="center" button onclick="show('00')">00</button></td>
+                <td align="center" button onclick="show('.')">.</button></td>
+                <td align="center" button onclick="solve()">=</button></td>
+            </tr>
+        </table>
+
+    </body>
+</html>
