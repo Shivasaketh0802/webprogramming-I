@@ -7,6 +7,10 @@
             function show(input){
                 document.getElementById("res").value += input;
             }
+            function back(){
+                ab=document.getElementById("res").value;
+                document.getElementById("res").value=ab.slice(0, -1);
+            }
             function solve(){
                 var out1=eval(document.getElementById("res").value);
                 document.getElementById("res").value=parseFloat(out1);
@@ -31,7 +35,7 @@
                 margin: 50px;
             }
             #res{
-                font-size:25px;
+                font-size: medium;
                 width: 100%;
                 height: 100%;
                 padding: 5px;
@@ -54,7 +58,7 @@
             </tr>
             <tr>
                 <td align="center" button onclick="clearIn()">AC</button></td>
-                <td align="center" button onclick="show('+/-')">+/-</button></td>
+                <td align="center" button onclick="back()">X</button></td>
                 <td align="center" button onclick="show('%')">%</button></td>
                 <td align="center" button onclick="show('/')">/</button></td> 
             </tr>
